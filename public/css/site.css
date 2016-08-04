@@ -1,0 +1,17 @@
+.navbar-brand {
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+}
+
+.main-page {
+    margin-top: 70px;
+}
+
+.main-page .jumbotron> h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 100px;
+}
+
+.main-page .jumbotron> p {
+    font-family: 'Indie Flower', cursive;
+}

@@ -1,0 +1,36 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "express/express.d.ts": {
+      "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
+    },
+    "express-serve-static-core/express-serve-static-core.d.ts": {
+      "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
+    },
+    "node/node.d.ts": {
+      "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
+    },
+    "serve-static/serve-static.d.ts": {
+      "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
+    },
+    "mongodb/mongodb.d.ts": {
+      "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
+    },
+    "mime/mime.d.ts": {
+      "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
+    },
+    "mongoose/mongoose.d.ts": {
+      "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
+    },
+    "mpromise/mpromise.d.ts": {
+      "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
+    },
+    "mongoose-promise/mongoose-promise.d.ts": {
+      "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
+    }
+  }
+}

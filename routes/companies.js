@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var passwordHash = require('password-hash');
 var jwt = require('jsonWebToken');
 var randomstring = require('randomstring');
 

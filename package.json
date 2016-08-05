@@ -17,6 +17,7 @@
     "mongoose-unique-validator": "^1.0.2",
     "morgan": "~1.7.0",
     "password-hash": "^1.2.2",
+    "randomstring": "^1.1.5",
     "serve-favicon": "~2.3.0"
   }
 }

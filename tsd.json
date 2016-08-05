@@ -12,7 +12,7 @@
       "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
     },
     "node/node.d.ts": {
-      "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
+      "commit": "e65947027120a0dc77723266906e4ce6c28bd725"
     },
     "serve-static/serve-static.d.ts": {
       "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
@@ -31,6 +31,9 @@
     },
     "mongoose-promise/mongoose-promise.d.ts": {
       "commit": "0d1048c7bbac722c592c5e9af54e310fc5658053"
+    },
+    "jsonwebtoken/jsonwebtoken.d.ts": {
+      "commit": "e65947027120a0dc77723266906e4ce6c28bd725"
     }
   }
 }

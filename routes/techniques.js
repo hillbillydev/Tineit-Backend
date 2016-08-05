@@ -15,6 +15,11 @@ router.post('/', function (req, res, next) {
                 error: err
             });
         }
+        if (!doc) {
+            return res.status(404).json({
+                title: 'Could not find the technique',
+            });
+        }
 
         var technique = new Technique({
             name: req.body.name,

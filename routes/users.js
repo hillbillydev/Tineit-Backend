@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var passwordHash = require('password-hash');
 var jwt = require('jsonwebtoken');
+var randomstring = require('randomstring');
 
 var User = require('../models/user');
 
@@ -50,7 +51,7 @@ router.post('/signin', function (req, res, next) {
                 error: { message: 'Invalid password' }
             });
         }
-        
+
         var token = jwt.sign({ user: doc }, 'secret', { expiresIn: 7200 });
         res.status(200).json({
             message: 'Success',
@@ -58,6 +59,69 @@ router.post('/signin', function (req, res, next) {
             userId: doc._id
         });
     })
+});
+
+router.get('/apikey', function (req, res, next) {
+    var decoded = jwt.decode(req.headers.authorization);
+
+    User.findById(decoded.user._id, function (err, doc) {
+        if (err) {
+            return res.status(404).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+
+        if (doc.apiKey !== null) {
+            return res.status(304).json({
+                title: 'You already have a api key.'
+            });
+        }
+
+        doc.apiKey = randomstring.generate({
+            length: 20,
+            charset: 'alphanumeric'
+        });
+
+        doc.save(function (err, result) {
+            if (err) {
+                return res.status(404).json({
+                    title: 'An error occurred',
+                    error: err
+                });
+            }
+
+            res.status(200).json({
+                message: 'Success',
+                obj: result
+            });
+        });
+    })
+});
+
+router.delete('/', function (req, res, next) {
+    var decoded = jwt.decode(req.headers.authorization);
+    User.findById(decoded.user._id, function (err, doc) {
+        if (err) {
+            return res.status(404).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+
+        doc.remove(function (err, doc) {
+            if (err) {
+                return res.status(404).json({
+                    title: 'An error occurred',
+                    error: err
+                });
+            }
+            return res.status(200).json({
+                title: 'Success',
+            });
+        });
+    });
+
 });
 
 module.exports = router;

@@ -23,7 +23,7 @@ To install this and try out the server you need to install this on your machine.
 
 Then you download the repository [here](https://github.com/Tinee/Curriculum-Vitae/archive/master.zip)
 
-then you unzip the file and place it at your favorite folder.
+then you unzip the file and place it in your favourite folder.
 
 Then you navigate to the folder with your terminal.
 
@@ -41,7 +41,7 @@ then
 npm start
 ```
 
-This will the start the server and listen default on port 3000. 
+This will the start the server and listens to port 3000 by default. 
 
 So try to navigate to http://localhost:3000/
 

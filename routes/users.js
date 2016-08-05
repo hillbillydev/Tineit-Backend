@@ -8,7 +8,7 @@ var User = require('../models/user');
 router.post('/', function (req, res, next) {
     var user = new User({
         firstname: req.body.firstname,
-        lastname: req.body.firstname,
+        lastname: req.body.lastname,
         password: passwordHash.generate(req.body.password),
         email: req.body.email
     });

@@ -10,6 +10,8 @@ var routes = require('./routes/app');
 var users = require('./routes/users');
 var companies = require('./routes/companies');
 var techniques = require('./routes/techniques');
+var companyletter = require('./routes/companyLetters');
+
 
 var app = express();
 mongoose.connect('localhost:27017/tineit');
@@ -32,6 +34,8 @@ app.use(function(req, res, next) {
 app.use('/user', users);
 app.use('/company', companies);
 app.use('/technique', techniques);
+app.use('/companyletter', companyletter);
+
 
 app.use('/', routes);
 

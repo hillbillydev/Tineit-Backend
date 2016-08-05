@@ -29,7 +29,7 @@ Then you navigate to the folder with your terminal.
 
 Example:
 ```
-cd ./documents/downloads
+cd ./documents/downloads/tineit
 ```
 
 And when your in your awesome folder where you put the project you simple run:

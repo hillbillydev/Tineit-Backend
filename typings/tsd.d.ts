@@ -8,3 +8,4 @@
 /// <reference path="mpromise/mpromise.d.ts" />
 /// <reference path="node/node.d.ts" />
 /// <reference path="serve-static/serve-static.d.ts" />
+/// <reference path="jsonwebtoken/jsonwebtoken.d.ts" />

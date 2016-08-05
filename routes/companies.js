@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var passwordHash = require('password-hash');
 var jwt = require('jsonWebToken');
+var randomstring = require('randomstring');
 
 var Company = require('../models/company');
 var User = require('../models/user');
@@ -16,9 +17,20 @@ router.post('/', function (req, res, next) {
                 error: err
             });
         }
+
+         if (!doc) {
+            return res.status(404).json({
+                title: 'User not found',
+                error: err
+            });
+        }
+
         var company = new Company({
             name: req.body.name,
-            secret: req.body.secret,
+            secret: randomstring.generate({
+                length: 8,
+                charset: 'alphanumeric'
+            }),
             user: doc
         });
         company.save(function (err, result) {

@@ -1,12 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var passwordHash = require('password-hash');
+var jwt = require('jsonWebToken');
 
 var Company = require('../models/company');
 var User = require('../models/user');
 
-router.post('/', function (req, res, next) {
-    var decoded = jwt.decode(req.query.token);
+router.post('/',  function (req, res, next) {
+    var decoded = jwt.decode(req.headers.authorization);
 
     User.findById(decoded.user._id, function (err, doc) {
         if (err) {
@@ -15,10 +16,9 @@ router.post('/', function (req, res, next) {
                 error: err
             });
         }
-
         var company = new Company({
             name: req.body.name,
-            secret: passwordHash.generate(req.body.secret),
+            secret: req.body.secret,
             user: doc
         });
         company.save(function (err, result) {
@@ -34,6 +34,15 @@ router.post('/', function (req, res, next) {
             })
         });
     });
+});
+
+router.get('/', function (req, res, next) {
+    var decoded = jwt.decode(req.headers.authorization);
+
+ Company.find({ 'user._id': decoded.user._id }).exec(function (err, docs) {
+    return res.json (docs);
+  });
+
 });
 
 module.exports = router;

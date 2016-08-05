@@ -5,7 +5,6 @@ var jwt = require('jsonWebToken');
 var Technique = require('../models/technique');
 var User = require('../models/user');
 
-
 router.post('/', function (req, res, next) {
     var decoded = jwt.decode(req.headers.authorization);
 
@@ -106,7 +105,7 @@ router.delete('/:id', function (req, res, next) {
                 error: err
             });
         }
-        
+
         if (!doc) {
             return res.status(404).json({
                 title: 'No technique found',

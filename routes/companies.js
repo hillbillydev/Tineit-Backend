@@ -39,7 +39,7 @@ router.post('/', function (req, res, next) {
 router.get('/', function (req, res, next) {
     var decoded = jwt.decode(req.headers.authorization);
 
-    Company.find({ 'user._id': decoded.user._id }).exec(function (err, docs) {
+    Company.find({ 'user': decoded.user._id }).exec(function (err, docs) {
         if(err){
             return res.status(400).json({
                 title: 'An error occurred',

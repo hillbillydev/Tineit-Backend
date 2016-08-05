@@ -34,6 +34,9 @@
     },
     "jsonwebtoken/jsonwebtoken.d.ts": {
       "commit": "e65947027120a0dc77723266906e4ce6c28bd725"
+    },
+    "randomstring/randomstring.d.ts": {
+      "commit": "514b3b96297cadfa8d584ccc9433fc9e3642068b"
     }
   }
 }

@@ -5,7 +5,7 @@ So in this repository is the backend part of it.
 
 The frontend is coming later on the repository 'Tineit-frontend'.
 
-In this project: ['Node', 'Express', 'Mongo', 'Mongoose', 'Jsonwebtoken' ]
+Keyword for the backend: ['Node', 'Express', 'Mongo', 'Mongoose', 'Jsonwebtoken' ]
 
 ## Motivation
 

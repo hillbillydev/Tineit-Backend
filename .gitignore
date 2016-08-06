@@ -1,4 +1,4 @@
 node_modules
 typings
-.vscode
+.vscode/spell.json
 npm-debug.log

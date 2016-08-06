@@ -18,7 +18,9 @@ So I wanted to have something to send to companies that not only wanted to see a
 
 ## Installation
 
-To install this and try out the server you need to install this on your machine.
+I'm going to give you two ways to install this on your machine. 
+This one is the boring one, and the other one is awesome. 
+> See 'Installation with Docker' section.
 
 [Node](https://nodejs.org/en/)
 
@@ -49,6 +51,42 @@ This will the start the server and listens to port 3000 by default.
 So try to navigate to http://localhost:3000/
 
 and you should see a simple website.
+
+## Installation with Docker
+
+Okay so you choise the awesome installation instead of the boring one, good for you! 
+
+So lets to this step by step.
+
+First install [Docker](https://www.docker.com/products/docker#/mac).
+
+Then download this [repository](https://github.com/Tinee/Curriculum-Vitae/archive/master.zip), then unzip it in your favorite folder. :)
+
+After the installation of Docker is done you can start the application 'Docker Quickstart Terminal'.
+
+After you have started it you can navigate to the folder with the terminal you just opened up.
+
+
+```
+Example-
+cd ./documents/downloads/tineit
+```
+Then you run.
+```
+docker-compose build
+```
+And lastly type in.
+```
+docker-compose up
+```
+
+docker-compose build will install all the dependency the project needs to run.
+
+docker- compose up will take all the dependencies and host them in separated containers with isolated networks.
+
+So try to navigate to http://192.168.99.100:3000/ in your browser.
+
+If you want to learn more about Docker I recommend you to check out [Dan Wahlins](https://twitter.com/DanWahlin) course on [Pluralsight](https://www.pluralsight.com/courses/docker-web-development).
 
 
 ## API Calls

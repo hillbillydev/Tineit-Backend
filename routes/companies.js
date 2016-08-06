@@ -30,6 +30,7 @@ router.post('/', function (req, res, next) {
                 length: 8,
                 charset: 'alphanumeric'
             }),
+            letter: req.body.letter,
             user: doc
         });
         company.save(function (err, result) {

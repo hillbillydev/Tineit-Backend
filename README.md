@@ -9,9 +9,12 @@ Keyword for the backend: ['Node', 'Express', 'Mongo', 'Mongoose', 'Jsonwebtoken'
 
 ## Motivation
 
-First motivation for my old project 'Curriculum-Vitae', I created it because my school was running to an end.
+ The motivation for my old project 'Curriculum-Vitae', I created it because my school was running to an end.
+
 So I wanted to have something to send to companies that not only wanted to see a piece of paper, and actually check out my
  programming skills at a website.
+
+ So the motivation for the Tineit project its really simple, make the old system legacy and rewrite everything with javascript
 
 ## Installation
 

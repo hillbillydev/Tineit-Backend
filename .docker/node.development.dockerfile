@@ -9,6 +9,6 @@ WORKDIR   $CONTAINER_PATH
 RUN npm install supervisor -g 
 
 EXPOSE 3000
+EXPOSE 5858
 
-
-ENTRYPOINT ["supervisor", "./bin/www"]
+ENTRYPOINT ["supervisor", "--debug=5858", "./bin/www"]

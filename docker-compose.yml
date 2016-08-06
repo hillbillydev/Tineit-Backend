@@ -4,15 +4,22 @@ version: '2'
 services:
 
   node:
+    container_name: nodeapp
+    image: nodeapp
     build:
       context: .
-      dockerfile: node.dockerfile
+      dockerfile: .docker/node.development.dockerfile
+    volumes:
+      - .:/var/www/tineit
+    environment:
+      - NODE_ENV=development
     ports:
       - "3000:3000"
     networks:
       - nodeapp-network
       
   mongodb:
+    container_name: mongodb
     image: mongo
     networks:
       - nodeapp-network

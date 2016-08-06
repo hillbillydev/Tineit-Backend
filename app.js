@@ -12,9 +12,8 @@ var companies = require('./routes/companies');
 var techniques = require('./routes/techniques');
 var companyletter = require('./routes/companyLetters');
 
-
 var app = express();
-mongoose.connect('localhost:27017/tineit');
+mongoose.connect('mongodb://mongodb/tineit');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -36,9 +35,7 @@ app.use('/company', companies);
 app.use('/technique', techniques);
 app.use('/companyletter', companyletter);
 
-
 app.use('/', routes);
-
 
 // ERROR BELOW
 app.use(function(req, res, next) {

@@ -58,7 +58,7 @@ Okay so you choise the awesome installation instead of the boring one, good for 
 
 So lets to this step by step.
 
-First install [Docker](https://www.docker.com/products/docker#/mac).
+First install [Docker Toolbox](https://www.docker.com/products/docker-toolbox).
 
 Then download this [repository](https://github.com/Tinee/Curriculum-Vitae/archive/master.zip), then unzip it in your favorite folder. :)
 

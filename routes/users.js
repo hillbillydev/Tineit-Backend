@@ -52,7 +52,7 @@ router.post('/signin', function (req, res, next) {
             });
         }
 
-        var token = jwt.sign({ user: doc }, 'secret', { expiresIn: 7200 });
+        var token = jwt.sign({ user: doc }, 'SeCreT&1x', { expiresIn: 9999 });
         res.status(200).json({
             message: 'Success',
             token: token

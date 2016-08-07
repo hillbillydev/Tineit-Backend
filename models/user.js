@@ -11,7 +11,7 @@ var schema = new Schema({
     lastname: { type: String, required: true },
     password: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    apiKey: { type: String, unique: true }
+    apiKey: { type: String}
 });
 
 schema.plugin(mongooseUniqueValidator);
